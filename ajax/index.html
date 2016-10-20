@@ -1,17 +1,5 @@
 <script src="jquery-3.1.1.min.js"></script>
-<div id="hoge"></div>
-<script>
-    $(function(){
-$.ajax({
-    url:"get_xml.php?url=http://weather.livedoor.com/forecast/webservice/json/v1?city=400040",
-    dataType:"json",
-    success:function(data){
-                console.log(data);
-                console.log(data.pinpointLocations[0]);
-                $("#hoge").html('<a href="'+data.pinpointLocations[0].link+'">'+data.pinpointLocations[0].name+'</a>');
-                console.log(data.pinpointLocations[0].link);
-
-    }
-});
-    });
-</script>
+<script src="main.js"></script>
+<div id="title"></div>
+<div id="today"></div>
+<div id="link"></div>

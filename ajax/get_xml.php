@@ -1,4 +1,5 @@
 <?php
+// http://nkmr.io/lecture/2014/get_xml.php.txt より
 if(isset($_GET["url"]) && preg_match("/^https?:/",$_GET["url"])){
   header('Content-type: application/xml');
   $req_url = $_GET['url'];

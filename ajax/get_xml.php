@@ -6,7 +6,7 @@ if(isset($_GET["url"]) && preg_match("/^https?:/",$_GET["url"])){
   foreach ( $_GET as $key => $value){
     if( strcmp( $key, "url" ) ){
       // url でない場合はオプションをつなげる
-      $req_url .= ("&" . $key . "=" . $value);
+      $req_url .= ("&" . $key . "=" . urlencode($value));
     }
   }
   echo file_get_contents($req_url);
